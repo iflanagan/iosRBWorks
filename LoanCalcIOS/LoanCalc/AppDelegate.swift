@@ -12,8 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
             // Override point for customization after application launch.
-            Rollbar.initWithAccessToken("4a4d0de2caa445a38d355a72e7f8ccf1")
+            // to obtain the Rollabr <post_client_item> login to the GUI (if project is setup) then click on settings and Access Tokens
+        // if project is not setup use the token in the wizard
+        let config: RollbarConfiguration = RollbarConfiguration()
+           config.environment = "PROD"
+           config.setServerHost("Ians-MacBook-Pro.local", root: "LoanCalc", branch: "my_branch",codeVersion: "1.2")
+            Rollbar.initWithAccessToken("<post_client_item>",configuration: config)
             Rollbar.info(withMessage: "Test message to Rollbar")
             Rollbar.critical("test now")
             //Rest of your code here...
