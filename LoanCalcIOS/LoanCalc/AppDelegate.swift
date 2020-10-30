@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Override point for customization after application launch.
             // to obtain the Rollabr <post_client_item> login to the GUI (if project is setup) then click on settings and Access Tokens
         // if project is not setup use the token in the wizard
+        
         let config: RollbarConfiguration = RollbarConfiguration()
            config.environment = "PROD"
            config.setServerHost("Ians-MacBook-Pro.local", root: "LoanCalc", branch: "my_branch",codeVersion: "1.2")
@@ -26,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
  
-
-    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

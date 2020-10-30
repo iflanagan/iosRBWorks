@@ -89,6 +89,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         lblTotalPayments.text = formatter.string(from: totalLoanPayments as NSNumber)
         lblTotalInterest.text = formatter.string(from: totalLoanInterest as NSNumber)
         lblMonthlyPayment.text = formatter.string(from: monthlyPayment as NSNumber)
+        
+     //  fatalError ("lblTotalCost() failed")
         lblTotalCost.text = formatter.string(from: totalCost as NSNumber)
 
     }
